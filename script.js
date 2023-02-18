@@ -14,12 +14,19 @@ const App = {
         }
         
     },
-    resultPost(value){
+    resultPost( value){
         this.post.splice(value, 1);
         this.counter++;
     },
     deletePost(value){
         this.post.splice(value, 1);
+    },
+    doneAll(){
+        this.counter += this.post.length;
+        this.post.splice(0, this.post.length);
+    },
+    deleteAll(){
+        this.post.splice(0, this.post.length);
     }
    },
    computed: {

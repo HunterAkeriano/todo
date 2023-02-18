@@ -12,14 +12,21 @@
         <div class="card">
             <div class="text">
                 <h1>TodoList</h1>
-                <p>by DimaGulak</p>
+                <div class="text-info">
+                    <p>by DimaGulak</p>
+                    <p>Обновление 0.1</p>
+                </div>
+                
             </div>
             <hr>
             <div class="form-control">
                 <div class="text">
                     <h3>Введите задание</h3>
-                    <p>Всего заданий: <span class="cspan">{{post.length}}</span></p>
-                    <p>Выполненых заданий: <span class="cspan">{{counter}}</span> </p>
+                    <div class="block-info">
+                        <p>Всего заданий: <span class="cspan">{{post.length}}</span></p>
+                        <p>Выполненых заданий: <span class="cspan">{{counter}}</span> </p>
+                    </div>
+                    
                
                 </div>
                 
@@ -30,8 +37,8 @@
             <button class="btn" @click="addPost" :disabled="!isBtn">Добавить</button>
             <hr>
             <ul class="list" v-if="post.length > 0">
-                <li class="list-item" v-for="posts in post">
-                    Задание: {{posts}}
+                <li class="list-item" v-for="value in post">
+                    Задание: {{value}}
                     <div class="btns">
                         <button class="btn primary" @click="resultPost">Готово</button>
                         <button class="btn danger" @click="deletePost">Удалить</button>
@@ -43,7 +50,25 @@
             <div class="text-info" v-else>
                 Заданий нет
             </div>
+           <div class="done-post" v-if="post.length >= 2">
+            <button class="btn primary" @click="doneAll">Готово всё</button>
+            <button class="btn danger" @click="deleteAll">Удалить всё</button>
+           </div>
            
+        </div>
+    </div>
+
+    <div class="container pt-5">
+        <div class="card">
+            <div class="text-upd">
+                <h3>Обновление:</h3>
+                <h5>0.1</h5>
+                <p>В данном Обновление я добавил две кнопки: Готово Всё и удалить Всё,
+                    для быстрого редактирования своих заданий. Также адаптировал приложение
+                    под мобильные устройства
+                </p>
+            </div>
+            
         </div>
     </div>
 
