@@ -14,7 +14,7 @@
                 <h1>TodoList</h1>
                 <div class="text-info">
                     <p>by DimaGulak</p>
-                    <p>Обновление 0.1</p>
+                    <p>Обновление {{update}}</p>
                 </div>
                 
             </div>
@@ -54,10 +54,18 @@
             <button class="btn primary" @click="doneAll">Готово всё</button>
             <button class="btn danger" @click="deleteAll">Удалить всё</button>
            </div>
-           
+
+           <!-- вызов музыки -->
+           <div class="container">
+            <button class="btn danger dell-all" @click.once="click++">Мне грустно</button>
+            <ul class="list music" v-if="click > 1">
+                <li><audio :src='audio' controls="controls"></audio></li>
+            </ul>
+        </div>
         </div>
     </div>
-
+    
+  
     <div class="container pt-5">
         <div class="card">
             <div class="text-upd">
@@ -66,6 +74,15 @@
                 <p>В данном Обновление я добавил две кнопки: Готово Всё и удалить Всё,
                     для быстрого редактирования своих заданий. Также адаптировал приложение
                     под мобильные устройства
+                </p>
+            </div>
+            
+        </div>
+        <div class="card mt-5">
+            <div class="text-upd">
+                <h3>Обновление:</h3>
+                <h5>0.2</h5>
+                <p>Добавил кнопку: Мне грустно. При нажатии на неё, вы получите аудио-трек, который поднимет вам настроение.
                 </p>
             </div>
             

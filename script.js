@@ -3,9 +3,12 @@ const App = {
     return{
         value: '',
         post: [],
-        counter: 0
-    }
-   },
+        counter: 0,
+        update: 0.2,
+        audio: 'audio.mp3',
+        click: 1,
+   }
+},
    methods: {
     addPost(){
         if(this.value.length > 0){
@@ -27,12 +30,15 @@ const App = {
     },
     deleteAll(){
         this.post.splice(0, this.post.length);
+    },
+    fellBlue(){
+        return true;
     }
    },
    computed: {
     isBtn(){
         return this.value.length > 0;
-    }
+    },
    }
 }
 

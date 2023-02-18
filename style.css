@@ -187,6 +187,11 @@ h3 {
 .text-upd h5{
   margin: 0;
 }
+.dell-all{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
 /* адаптация */
 @media(max-width:500px){
@@ -207,4 +212,12 @@ h3 {
     margin-top: 5px;
     font-size: 12px;
   }
+}
+.music{
+  max-width: 270px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.mt-5{
+  margin-top: 20px;
 }
