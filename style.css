@@ -192,6 +192,11 @@ h3 {
   margin: 0 auto;
   margin-top: 20px;
 }
+.dellall{
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+}
 
 /* адаптация */
 @media(max-width:500px){

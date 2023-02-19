@@ -4,7 +4,7 @@ const App = {
         value: '',
         post: [],
         counter: 0,
-        update: 0.2,
+        update: 0.3,
         audio: 'audio.mp3',
         click: 1,
    }
@@ -42,4 +42,9 @@ const App = {
    }
 }
 
-Vue.createApp(App).mount('#app');
+const vue = Vue.createApp(App);
+vue.mount('#app');
+
+document.querySelector('.dellall').addEventListener('click', function(){
+    vue.unmount();
+})
